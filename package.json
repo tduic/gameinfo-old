@@ -1,0 +1,40 @@
+{
+  "name": "gameinfo-express",
+  "version": "1.0.0",
+  "description": "practice setting up a website with functionality",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tduic/gameinfo.git"
+  },
+  "author": "tyler duic",
+  "license": "ISC",
+  "scripts": {
+    "watch": "nodemon ./start.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap": "^4.3.1",
+    "cookie-parser": "^1.4.4",
+    "csurf": "^1.10.0",
+    "dotenv": "^8.0.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.1.0",
+    "forms": "^1.3.1",
+    "http-auth": "^3.2.3",
+    "jquery": "^3.4.1",
+    "mongoose": "^5.6.2",
+    "popper.js": "^1.15.0",
+    "pug": "^2.0.4",
+    "uuid": "^3.3.2",
+    "xtend": "^4.0.1"
+  },
+  "bugs": {
+    "url": "https://github.com/tduic/gameinfo/issues"
+  },
+  "homepage": "https://github.com/tduic/gameinfo#readme",
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  },
+  "keywords": []
+}
