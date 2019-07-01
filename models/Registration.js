@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// database schema
 const registrationSchema = new mongoose.Schema({
   name: {
     type: String,

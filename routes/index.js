@@ -2,19 +2,31 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const auth = require('http-auth');
-const { body, validationResult } = require('express-validator/check');
+const request = require('request');
+
+const { body, validationResult } = require('express-validator');
 
 const router = express.Router();
 const Registration = mongoose.model('Registration');
 
+// set up
 const basic = auth.basic({
   file: path.join(__dirname, '../users.htpasswd'),
 });
 
+// the following block shows how to make an api call
+/*request('http://duics.com', function (error, response, body) {
+  console.error('error:', error); // Print the error if one occurred
+  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+  console.log('body:', body); // Print the HTML for the Google homepage.
+});*/
+
+// get request
 router.get('/', (req, res) => {
-  res.render('form', { title: 'Registration form' });
+  res.render('form', { title: 'Registration form' , data: null });
 });
 
+// sign in get request
 router.get('/registrations', auth.connect(basic), (req, res) => {
   Registration.find()
     .then((registrations) => {
@@ -23,6 +35,7 @@ router.get('/registrations', auth.connect(basic), (req, res) => {
     .catch(() => { res.send('Sorry! Something went wrong.'); });
 });
 
+// post request with validation
 router.post('/',
   [
     body('name')
@@ -37,8 +50,11 @@ router.post('/',
 
     if (errors.isEmpty()) {
       const registration = new Registration(req.body);
-      registration.save()
-        .then(() => { res.send('Thank you for your registration!'); })
+      registration.save();
+      Registration.find()
+        .then((registrations) => {
+          res.render('index', { title: 'Listing registrations', registrations });
+        })
         .catch(() => { res.send('Sorry! Something went wrong.'); });
     } else {
       res.render('form', {

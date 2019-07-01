@@ -1,12 +1,282 @@
 doctype html
-html
+html(lang='en')
+
   head
-    title= `${title}`
-    link(rel='stylesheet', href='/css/bootstrap.min.css')
-    link(rel='stylesheet', href='/css/styles.css')
 
-  body
-    div.container.listing-reg
-      h1 My Amazing App
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
 
-      block content
+    block title
+
+    <!-- Custom fonts for this template -->
+    link(href='/vendor/fontawesome-free/css/all.min.css', rel='stylesheet', type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i', rel='stylesheet')
+
+    <!-- Custom styles for this template-->
+    link(href='/css/sb-admin-2.min.css', rel='stylesheet')
+
+  body(id='page-top')
+
+    <!-- Page Wrapper -->
+    div(id='wrapper')
+
+      <!-- Sidebar -->
+      ul.navbar-nav.bg-gradient-primary.sidebar.sidebar-dark.accordian(id='accordianSidebar')
+
+        <!-- Sidebar - Brand -->
+        a.sidebar-brand.d-flex.align-iems-center.justify-content-center(href='/Home/index.html')
+          div.sidebar-brand-icon.rotate-n-15
+            i.fa.fa-futbol
+          div.sidebar-brand-text.mx-3 Game
+            sup Info
+
+        <!-- Divider -->
+        hr.sidebar-divider.my-0
+
+        <!-- Nav Item - Dashboard -->
+        li.nav-item.active
+          a.nav-link(href='/Home/index.html')
+            i.fas.fa-fw.fa-tachometer-alt
+            span Dashboard
+
+        <!-- Divider -->
+        hr.sidebar-divider
+
+        <!-- Heading -->
+        div.sidebar-heading Interface
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        li.nav-item
+          a.nav-link.collapsed(href='#', data-toggle='collapse', data-target='#collapseTwo', aria-expanded='true', aria-controls='collapseTwo')
+            i.fas.fa-baseball-ball
+            span Sports
+          div.collapse(id='collapseTwo', aria-labelledby='headingTwo', data-parent='#accordianSidebar')
+            div.bg-white.py-2.collapse-inner.rounded
+              h6.collapse-header Take Your Pick:
+              a.collapse-item(href='/Sports/baseball.html') Baseball
+              a.collapse-item(href='/Sports/basketball.html') Basketball
+              a.collapse-item(href='/Sports/football.html') Football
+              a.collapse-item(href='/Sports/golf.html') Golf
+              a.collapse-item(href='/Sports/hockey.html') Hockey
+              a.collapse-item(href='/Sports/soccer.html') Soccer
+              a.collapse-item(href='/Sports/tennis.html') Tennis
+              a.collapse-item(href='/Sports/volleyball.html') Volleyball
+
+        <!-- Nav Item - Utilities Collapse Menu -->
+        li.nav-item
+          a.nav-link.collapsed(href='#', data-toggle='collapse', data-target='#collapseUtilities', aria-expanded='true', aria-controls='collapseUtilities')
+            i.fas.fa-fw.fa-wrench
+            span Customizations
+          div.collapse(id='collapseUtilities', aria-labelledby='headingUtilities', data-parent='#accordianSidebar')
+            div.bg-white.py-2.collapse-inner.rounded
+              h6.collapse-header Components and Utilities:
+              a.collapse-item(href='/Design/utilities-animation.html') Animations
+              a.collapse-item(href='/Design/utilities-border.html') Borders
+              a.collapse-item(href='/Design/buttons.html') Buttons
+              a.collapse-item(href='/Design/cards.html') Cards
+              a.collapse-item(href='/Design/utilities-color.html') Colors
+              a.collapse-item(href='/Design/utilities-other.html') Other
+
+        <!-- Divider -->
+        hr.sidebar-divider
+
+        <!-- Heading -->
+        div.sidebar-heading Addons
+
+        <!-- Nav Item - Pages Collapse Menu -->
+        li.nav-item
+          a.nav-link.collapsed(href='#', data-toggle='collapse', data-target='#collapsePages', aria-expanded='true', aria-controls='collapsePages')
+            i.fas.fa-fw.fa-folder
+            span Pages
+          div.collapse(id='collapsePages', aria-labelledby='headingPages', data-parent='#accordianSidebar')
+            div.bg-white.py-2.collapse-inner.rounded
+              h6.collapse-header Login Screens:
+              a.collapse-item(href='/User/login.html') Login
+              a.collapse-item(href='/User/register.html') Register
+              a.collapse-item(href='/User/user-forgot-password.html') Forgot Password
+              div.collapse-divider
+              h6.collapse-header Other Pages:
+              a.collapse-item(href='/Shared/404.html') 404 Page
+              a.collapse-item(href='/Shared/blank.html') Blank Page
+
+        <!-- Nav Item - Charts -->
+        li.nav-item
+          a.nav-link(href='/Design/charts.html')
+            i.fas.fa-fw.fa-chart-area
+            span Charts
+
+        <!-- Nav Item - Tables -->
+        li.nav-item
+          a.nav-link(href='/Design/tables.html')
+            i.fas.fa-fw.fa-table
+            span Tables
+
+        <!-- Divider -->
+        hr.sidebar-divider.d-none.d-md-block
+
+        <!-- Sidebar Toggler (Sidebar) -->
+        div.text-center.d-none.d-md-inline
+          button.rounded-circle.border-0(id='sidebarToggle')
+
+      <!-- Content Wrapper -->
+      div.d-flex.flex-column(id='content-wrapper')
+
+        <!-- Topbar -->
+        nav.navbar.navbar-expand.navbar-light.bg-white.topbar.mb-4.static-top.shadow
+
+          <!-- Sidebar Toggle (Topbar) -->
+          button.btn.btn-link.d-md-none.rounded-circle.mr-3
+            i.fa.fa-bars
+
+          <!-- Topbar Search -->
+          form.d-none.d-sm-inline.form-inline.mr-auto.ml-md-3.my-2.my-md-0.mw-100.navbar-search
+            div.input-group
+              input.form-control.bg-light.border-0.small(type='text', placeholder='Search for...', aria-label='Search', aria-describedby='basic-addon2')
+              div.input-group-append
+                button.btn.btn-primary(type='button')
+                  i.fas.fa-search.fa-sm
+
+          <!-- Topbar Navbar -->
+          ul.navbar-nav.ml-auto
+
+            <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+            li.nav-item.dropdown.no-arrow.d-sm-none
+              a.nav-link.dropdown-toggle(href='#', id='searchDropdown', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                i.fas.fa-search.fa-fw
+
+              <!-- Dropdown - Messages -->
+              div.dropdown-menu.dropdown-menu-right.p-3.shadow.animated--grow-in(aria-labelledby='searchDropdown')
+                form.form-inline.mr-auto.w-100.navbar-search
+                  div.input-group
+                    input.form-control.bg-light.border-0.small(type='text', placeholder='Search for...', aria-label='Search', aria-describedby='basic-addon2')
+                    div.input-group-append
+                      button.btn.btn-primary(type='button')
+                        i.fas.fa-search.fa-sm
+
+            <!-- Nav Item - Alerts -->
+            li.nav-item.dropdown.no-arrow.mx-1
+              a.nav-link.dropdown-toggle(href='#', id='alertsDropdown', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                i.fas.fa-bell.fa-fw
+
+                <!-- Counter - Alerts -->
+                span.badge.badge-danger.badge-counter 3+
+
+              <!-- Dropdown - Alerts -->
+              div.dropdown-list.dropdown-menu.dropdown-menu-right.shadow.animated--grow-in(aria-labelledby='alertsDropdown')
+                h6.dropdown-header Alerts Center
+                a.dropdown-item.d-flex.align-iems-center(href='#')
+                  div.mr-3
+                    div.icon-circle.bg-primary
+                      i.fas.fa-file-alt.text-white
+                  div
+                    div.small.text-gray-500 December 12, 2019
+                    span.font-weight-bold A new monthly report is ready to download!
+                a.dropdown-item.d-flex.align-iems-center(href='#')
+                  div.mr-3
+                    div.icon-circle.bg-success
+                      i.fas.fa-donate.text-white
+                  div
+                    div.small.text-gray-500 December 7, 2019
+                    Money has been deposited into your account!
+                a.dropdown-item.d-flex.align-iems-center(href='#')
+                  div.mr-3
+                    div.icon-circle.bg-warning
+                      i.fas.fa-exclamation-triangle.text-white
+                  div
+                    div.small.text-gray-500 December 2, 2019
+                    Spending Alert: Weve noticed unusually high spending for your account.
+                a.dropdown-item.text-center.small.text-gray-500(href='#') Show All Alerts
+
+            <!-- Nav Item - Messages -->
+            li.nav-item.dropdown.no-arrow.mx-1
+              a.nav-link.dropdown-toggle(href='#', id='messagesDropdown', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                i.fas.fa-envelope.fa-fw
+
+                <!-- Counter - Messages -->
+                span.badge.badge-danger.badge-counter 7
+
+              <!-- Dropdown - Messages -->
+              div.dropdown-list.dropdown-menu.dropdown-menu-right.shadow.animated--grow-in(aria-labelledby='messagesDropdown')
+                h6.dropdown-header Message Center
+                a.dropdown-item.d-flex.align-iems-center
+                  div.dropdown-list-image.mr-3
+                    img.rounder-circle(src='https://source.unsplash.com/fn_BT9fwg_E/60x60', alt='')
+                    div.status-indicator.bg-success
+                  div.font-weight-bold
+                    div.text-truncate Hi there! I am wondering if you can help me with a problem Ive been having.
+                    div.small.text-gray-500 Emily Fowler 58m
+                a.dropdown-item.d-flex.align-iems-center(href='#')
+                  div.dropdown-list-image.mr-3
+                    img.rounder-circle(src='https://source.unsplash.com/AU4VPcFN4LE/60x60', alt='')
+                    div.status-indicator
+                  div
+                  div.text-truncate I have the photos that you ordered last month, how would you like them sent to you
+                  div.small.text-gray-500 Jae Chun 1d
+
+            <!-- Nav Item - User Information -->
+            li.nav-item.dropdown.no-arrow
+              a.nav-link.dropdown-toggle(href='#', id='userDropdown', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                span.mr-2.d-none.d-lg-inline.text-gray-600.small Robertson Howard
+                img.img-profile.rounded-circle(src='https://source.unsplash.com/QAB-WJcbgJk/60x60')
+
+              <!-- Dropdown - User Information -->
+              div.dropdown-menu.dropdown-menu-right.shadow.animated--grow-in(aria-labelledby='userDropdown')
+                a.dropdown-item(href='#')
+                  i.fas.fa-user.fa-sm.fa-fw.mr-2.text-gray-400
+                  span Profile
+                a.dropdown-item(href='#')
+                  i.fas.fa-cogs.fa-sm.fa-fw.mr-2.text-gray-400
+                  span Settings
+                a.dropdown-item(href='#')
+                  i.fas.fa-list.fa-sm.fa-fw.mr-2.text-gray-400
+                  span Activity Log
+                div.dropdown-divider
+                a.dropdown-item(href='#', data-toggle='modal', data-target='#logoutModal')
+                  i.fas.fa-sign-out-alt.fa-sm.fa-fw.mr-2.text-gray-400
+                  span Logout
+
+        <!-- Main Content -->
+        div(id='content')
+
+          <!-- Begin Page Content -->
+          div.container.listing-reg
+
+            block content
+
+        <!-- Footer -->
+        footer.sticky-footer.bg-white
+          div.container.my-auto
+            div.copyright.text-center.my-auto
+              span Copyright &copy; My Website 2019
+
+    <!-- Scroll to Top Button -->
+    a.scroll-to-top.rounded(href='#page-top')
+      i.fas.fa-angle.up
+
+    <!-- Logout Modal -->
+    div.modal.fade(id='logoutModal', tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+      div.modal-dialog(role='document')
+        div.modal-content
+          div.modal-header
+            h5.modal-title(id='exampleModalLabel') Ready to Leave
+            button.close(type='button', data-dismiss='modal',aria-label='Close')
+              span(aria-hidden='true') x
+          div.modal-body Select Logout below if you are ready to end your current session
+          div.modal-footer
+            button.btn.btn-secondary(type='button', data-dismiss='modal') Cancel
+            a.btn.btn-primary(href='/User/Login.html') Logout
+
+    <!-- Bootstrap core JavaScript-->
+    script(src='/vendor/jquery/jquery.min.js')
+    script(src='/vendor/bootstrap/js/bootstrap.bundle.min.js')
+
+    <!-- Core plugin JavaScript-->
+    script(src='/vendor/jquery-easing/jquery.easing.min.js')
+
+    <!-- Custom scripts for all pages-->
+    script(src='/js/sb-admin-2.min.js')
+
+    block scripts

@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+// use pug files in views for layout
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
