@@ -7,7 +7,10 @@ const request = require('request');
 const { body, validationResult } = require('express-validator');
 
 const router = express.Router();
+//const Player = mongoose.model('Player');
 const Registration = mongoose.model('Registration');
+//const Series = mongoose.model('Series');
+//const Team = mongoose.model('Team');
 
 // set up
 const basic = auth.basic({
