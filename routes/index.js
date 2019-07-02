@@ -26,7 +26,7 @@ const basic = auth.basic({
 
 // get request
 router.get('/', (req, res) => {
-  res.render('home/index', { title: 'Registration form', data: null });
+  res.render('home/form', { title: 'Registration form', data: null });
 });
 
 router.get('/design/:file', (req, res) => {
@@ -63,7 +63,7 @@ router.post('/',
       registration.save();
       Registration.find()
         .then((registrations) => {
-          res.render('index', { title: 'Listing registrations', registrations });
+          res.render('home/index', { title: 'Listing registrations', registrations });
         })
         .catch(() => { res.send('Sorry! Something went wrong.'); });
     } else {
