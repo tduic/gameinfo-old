@@ -1,0 +1,133 @@
+extends /shared/layout
+
+block title
+
+  title Buttons
+
+block content
+
+  <!-- Page Heading -->
+  h1.h3.mb-4.text-gray-800 Buttons
+  div.row
+    div.col-lg-6
+      <!-- Circle Buttons -->
+      div.card.shadow.mb-4
+        div.card-header.py-3
+          h6.m-0.font-weight-bold.text-primary Circle Buttons
+        div.card-body
+          p Use Font Awesome Icons (included with this theme package) along with the circle buttons as shown in the examples below!
+          <!-- Circle Buttons (Default) -->
+          div.mb-2
+            code .btn-circle
+          a.btn.btn-primary.btn-circle(href='#')
+            i.fab.fa-facebook-f
+          a.btn.btn-success.btn-circle(href='#')
+            i.fab.fa-check
+          a.btn.btn-info.btn-circle(href='#')
+            i.fab.fa-info-circle
+          a.btn.btn-warning.btn-circle(href='#')
+            i.fab.fa-exclamation-triangle
+          a.btn.btn-danger.btn-circle(href='#')
+            i.fab.fa-trash
+          <!-- Circle Buttons (Small) -->
+          div.mt-4.mb-2
+            code .btn-circle .btn-sm
+          a.btn.btn-primary.btn-circle.btn-sm(href='#')
+            i.fab.fa-facebook-f
+          a.btn.btn-success.btn-circle.btn-sm(href='#')
+            i.fab.fa-check
+          a.btn.btn-info.btn-circle.btn-sm(href='#')
+            i.fab.fa-info-circle
+          a.btn.btn-warning.btn-circle.btn-sm(href='#')
+            i.fab.fa-exclamation-triangle
+          a.btn.btn-danger.btn-circle.btn-sm(href='#')
+            i.fab.fa-trash
+          <!-- Circle Buttons (Large) -->
+          div.mt-4.mb-2
+            code .btn-circle .btn-lg
+          a.btn.btn-primary.btn-circle.btn-lg(href='#')
+            i.fab.fa-facebook-f
+          a.btn.btn-success.btn-circle.btn-lg(href='#')
+            i.fab.fa-check
+          a.btn.btn-info.btn-circle.btn-lg(href='#')
+            i.fab.fa-info-circle
+          a.btn.btn-warning.btn-circle.btn-lg(href='#')
+            i.fab.fa-exclamation-triangle
+          a.btn.btn-danger.btn-circle.btn-lg(href='#')
+            i.fab.fa-trash
+
+      <!-- Brand Buttons -->
+      div.card.shadow.mb-4
+        div.card-header.py-3
+          h6.m-0.font-weight-bold.text-primary Brand Buttons
+        div.card-body
+          p Google and Facebook buttons are available featuring each company's respective brand color. They are used on the user login and registration pages.
+          p
+            span You can create more custom buttons by adding a new color variable in the
+            code  _variables.scss
+            span  file and then using the Bootstrap button variant mixin to create a new style, as demonstrated in the
+            code  _buttons.scss
+            span  file.
+          a.btn.btn-google.btn-block(href='#')
+            i.fab.fa-google.fa-fw
+            span .btn-google
+          a.btn.btn-facebook.btn-block(href='#')
+            i.fab.fa-facebook-f.fa-fw
+            span .btn-facebook
+
+    div.col-lg-6
+      div.card.shadow.mb-4
+        div.card-header.py-3
+          h6.m-0.font-weight-bold.text-primary Split Buttons with Icon
+        div.card-body
+          p
+            span Works with any button colors, just use the
+            code  .btn-icon-split
+            span  class and the markup in the examples below. The examples below also use the
+            code  .text-white-50
+            span  helper class on the icons for additional styling, but it is not required.
+          a.btn.btn-primary.btn-icon-split(href='#')
+            span.icon.text-white-50
+              i.fas.fa-flag
+            span.text Split Button Primary
+          div.my-2
+          a.btn.btn-success.btn-icon-split(href='#')
+            span.icon.text-white-50
+              i.fas.fa-check
+            span.text Split Button Success
+          div.my-2
+          a.btn.btn-info.btn-icon-split(href='#')
+            span.icon.text-white-50
+              i.fas.fa-info-circle
+            span.text Split Button Info
+          div.my-2
+          a.btn.btn-warning.btn-icon-split(href='#')
+            span.icon.text-white-50
+              i.fas.fa-exclamation-triangle
+            span.text Split Button Warning
+          div.my-2
+          a.btn.btn-danger.btn-icon-split(href='#')
+            span.icon.text-white-50
+              i.fas.fa-trash
+            span.text Split Button Danger
+          div.my-2
+          a.btn.btn-secondary.btn-icon-split(href='#')
+            span.icon.text-white-50
+              i.fas.fa-arrow-right
+            span.text Split Button Secondary
+          div.my-2
+          a.btn.btn-light.btn-icon-split(href='#')
+            span.icon.text-white-50
+              i.fas.fa-arrow-right
+            span.text Split Button Primary
+          div.mb-4
+          p Also works with small and large button classes!
+          a.btn.btn-primary.btn-icon-split.btn-sm(href='#')
+            span.icon.text-white-50
+              i.fas.fa-flag
+            span.text Split Button Small
+          div.my-2
+          a.btn.btn-primary.btn-icon-split.btn-lg(href='#')
+            span.icon.text-white-50
+              i.fas.fa-flag
+            span.text Split Button Large

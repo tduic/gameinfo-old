@@ -1,0 +1,76 @@
+extends /shared/layout
+
+block title
+
+  title Registrations
+
+block content
+
+  // if statement within code example
+  //if registrations && registrations.length
+  //  table.listing-table.table-dark.table-striped
+  //    tr
+  //      th Name
+  //      th Email
+  //    each registration in registrations
+  //      tr
+  //        td= registration.name
+  //        td= registration.email
+  //else
+  //  p No registrations yet
+
+
+  <!-- Area Chart -->
+  div.col-xl-8.col-lg-7
+    div.card.shadow.mb-4
+      <!-- Card Header - Dropdown -->
+      div.card-header.py-3.d-flex.flex-row.align-items-center.justify-content-between
+        h6.m-0.font-weight-bold.text-primary Earnings Overview
+        div.dropdown.no-arrow
+          a.dropdown-toggle(href='#', role='button', id='dropdownMenuLink', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            i.fas.fa-ellipsis-v.fa-sm.fa-fw.text-gray-400
+          div.dropdown-menu.dropdown-menu-right.shadow.animated--fade-in(aria-labelledby='dropdownMenuLink')
+            div.dropdown-header Dropdown Header:
+            a.dropdown-item(href='#') Action
+            a.dropdown-item(href='#') Another action
+            div.dropdown-divider
+            a.dropdown-item(href='#') Something else here
+      div.card-body
+        div.chart-area
+          canvas(id='myAreaChart')
+
+  <!-- Pie Chart -->
+  div.col-xl-4.col-lg-5
+    div.card.shadow.mb-4
+      <!-- Card Header - Dropdown -->
+      div.card-header.py-3.d-flex.flex-row.align-items-center.justify-content-between
+        h6.m-0.font-weight-bold.text-primary Revenue Sources
+        div.dropdown.no-arrow
+          a.dropdown-toggle(href='#', role='button', id='dropdownMenuLink', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+            i.fas.fa-ellipsis-v.fa-sm.fa-fw.text-gray-400
+          div.dropdown-menu.dropdown-menu-right.shadow.animated--fade-in(aria-labelledby='dropdownMenuLink')
+            div.dropdown-header Dropdown Header:
+            a.dropdown-item(href='#') Action
+            a.dropdown-item(href='#') Another action
+            div.dropdown-divider
+            a.dropdown-item(href='#') Something else here
+      div.card-body
+        div.chart-pie.pt-4.pb-2
+          canvas(id='myPieChart')
+        div.mt-4.text-center.small
+          span.mr-2
+            i.fas.fa-circle.text-primary Direct
+          span.mr-2
+            i.fas.fa-circle.text-success Social
+          span.mr-2
+            i.fas.fa-circle.text-info Referral
+
+
+block scripts
+
+  <!-- Page level plugins -->
+  script(src='/vendor/chart.js/Chart.min.js')
+
+  <!-- Page level custom scripts -->
+  script(src='/js/demo/chart-area-demo.js')
+  script(src='/js/demo/chart-pie-demo.js')

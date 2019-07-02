@@ -27,7 +27,7 @@ html(lang='en')
       ul.navbar-nav.bg-gradient-primary.sidebar.sidebar-dark.accordian(id='accordianSidebar')
 
         <!-- Sidebar - Brand -->
-        a.sidebar-brand.d-flex.align-iems-center.justify-content-center(href='/Home/index.html')
+        a.sidebar-brand.d-flex.align-iems-center.justify-content-center(href='/home/index')
           div.sidebar-brand-icon.rotate-n-15
             i.fa.fa-futbol
           div.sidebar-brand-text.mx-3 Game
@@ -38,7 +38,7 @@ html(lang='en')
 
         <!-- Nav Item - Dashboard -->
         li.nav-item.active
-          a.nav-link(href='/Home/index.html')
+          a.nav-link(href='/home/index')
             i.fas.fa-fw.fa-tachometer-alt
             span Dashboard
 
@@ -56,14 +56,14 @@ html(lang='en')
           div.collapse(id='collapseTwo', aria-labelledby='headingTwo', data-parent='#accordianSidebar')
             div.bg-white.py-2.collapse-inner.rounded
               h6.collapse-header Take Your Pick:
-              a.collapse-item(href='/Sports/baseball.html') Baseball
-              a.collapse-item(href='/Sports/basketball.html') Basketball
-              a.collapse-item(href='/Sports/football.html') Football
-              a.collapse-item(href='/Sports/golf.html') Golf
-              a.collapse-item(href='/Sports/hockey.html') Hockey
-              a.collapse-item(href='/Sports/soccer.html') Soccer
-              a.collapse-item(href='/Sports/tennis.html') Tennis
-              a.collapse-item(href='/Sports/volleyball.html') Volleyball
+              a.collapse-item(href='/sports/baseball') Baseball
+              a.collapse-item(href='/sports/basketball') Basketball
+              a.collapse-item(href='/sports/football') Football
+              a.collapse-item(href='/sports/golf') Golf
+              a.collapse-item(href='/sports/hockey') Hockey
+              a.collapse-item(href='/sports/soccer') Soccer
+              a.collapse-item(href='/sports/tennis') Tennis
+              a.collapse-item(href='/sports/volleyball') Volleyball
 
         <!-- Nav Item - Utilities Collapse Menu -->
         li.nav-item
@@ -73,12 +73,13 @@ html(lang='en')
           div.collapse(id='collapseUtilities', aria-labelledby='headingUtilities', data-parent='#accordianSidebar')
             div.bg-white.py-2.collapse-inner.rounded
               h6.collapse-header Components and Utilities:
-              a.collapse-item(href='/Design/utilities-animation.html') Animations
-              a.collapse-item(href='/Design/utilities-border.html') Borders
-              a.collapse-item(href='/Design/buttons.html') Buttons
-              a.collapse-item(href='/Design/cards.html') Cards
-              a.collapse-item(href='/Design/utilities-color.html') Colors
-              a.collapse-item(href='/Design/utilities-other.html') Other
+              a.collapse-item(href='/design/utilities-animation') Animations
+              a.collapse-item(href='/design/utilities-border') Borders
+              a.collapse-item(href='/design/buttons') Buttons
+              a.collapse-item(href='/design/cards') Cards
+              a.collapse-item(href='/design/utilities-color') Colors
+              a.collapse-item(href='/design/utilities-other') Other
+              a.collapse-item(href='/design/tables') Tables
 
         <!-- Divider -->
         hr.sidebar-divider
@@ -94,23 +95,23 @@ html(lang='en')
           div.collapse(id='collapsePages', aria-labelledby='headingPages', data-parent='#accordianSidebar')
             div.bg-white.py-2.collapse-inner.rounded
               h6.collapse-header Login Screens:
-              a.collapse-item(href='/User/login.html') Login
-              a.collapse-item(href='/User/register.html') Register
-              a.collapse-item(href='/User/user-forgot-password.html') Forgot Password
+              a.collapse-item(href='/user/login') Login
+              a.collapse-item(href='/user/register') Register
+              a.collapse-item(href='/user/user-forgot-password') Forgot Password
               div.collapse-divider
               h6.collapse-header Other Pages:
-              a.collapse-item(href='/Shared/404.html') 404 Page
-              a.collapse-item(href='/Shared/blank.html') Blank Page
+              a.collapse-item(href='/shared/404') 404 Page
+              a.collapse-item(href='/shared/blank') Blank Page
 
         <!-- Nav Item - Charts -->
         li.nav-item
-          a.nav-link(href='/Design/charts.html')
+          a.nav-link(href='/design/charts')
             i.fas.fa-fw.fa-chart-area
             span Charts
 
         <!-- Nav Item - Tables -->
         li.nav-item
-          a.nav-link(href='/Design/tables.html')
+          a.nav-link(href='/design/tables')
             i.fas.fa-fw.fa-table
             span Tables
 
@@ -267,7 +268,7 @@ html(lang='en')
           div.modal-body Select Logout below if you are ready to end your current session
           div.modal-footer
             button.btn.btn-secondary(type='button', data-dismiss='modal') Cancel
-            a.btn.btn-primary(href='/User/Login.html') Logout
+            a.btn.btn-primary(href='/user/Login') Logout
 
     <!-- Bootstrap core JavaScript-->
     script(src='/vendor/jquery/jquery.min.js')

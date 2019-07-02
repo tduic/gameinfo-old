@@ -15,7 +15,7 @@ const basic = auth.basic({
 });
 
 // the following block shows how to make an api call
-/*request('http://duics.com', function (error, response, body) {
+/*request('http://google.com', function (error, response, body) {
   console.error('error:', error); // Print the error if one occurred
   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
   console.log('body:', body); // Print the HTML for the Google homepage.
@@ -23,16 +23,23 @@ const basic = auth.basic({
 
 // get request
 router.get('/', (req, res) => {
-  res.render('form', { title: 'Registration form' , data: null });
+  res.render('home/index', { title: 'Registration form', data: null });
 });
 
-// sign in get request
-router.get('/registrations', auth.connect(basic), (req, res) => {
-  Registration.find()
-    .then((registrations) => {
-      res.render('index', { title: 'Listing registrations', registrations });
-    })
-    .catch(() => { res.send('Sorry! Something went wrong.'); });
+router.get('/design/:file', (req, res) => {
+  res.render(req.url.slice(1), { title: 'Registration form', data: null });
+});
+
+router.get('/home/:file', (req, res) => {
+  res.render(req.url.slice(1), { title: 'Registration form', data: null });
+});
+
+router.get('/shared/:file', (req, res) => {
+  res.render(req.url.slice(1), { title: 'Registration form', data: null });
+});
+
+router.get('/sports/:file', (req, res) => {
+  res.render(req.url.slice(1), { title: 'Registration form', data: null });
 });
 
 // post request with validation
