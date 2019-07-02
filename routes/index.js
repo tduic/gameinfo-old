@@ -3,6 +3,14 @@ const mongoose = require('mongoose');
 const path = require('path');
 const auth = require('http-auth');
 const request = require('request');
+const requirejs = require('requirejs');
+
+requirejs.config({
+  //Pass the top-level main.js/index.js require
+  //function to requirejs so that node modules
+  //are loaded relative to the top-level JS file.
+  nodeRequire: require
+});
 
 const { body, validationResult } = require('express-validator');
 

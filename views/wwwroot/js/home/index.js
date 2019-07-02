@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = requirejs('mongoose');
 var Registrations = mongoose.model('Registration', registrationSchema);
 
 // find all registrations
